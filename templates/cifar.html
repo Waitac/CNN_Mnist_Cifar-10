@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>CIFAR-10 - Reconhecimento</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>CIFAR-10 - Reconhecimento de Objetos</h1>
+        <form method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" required>
+            <button type="submit">Enviar</button>
+        </form>
+        {% if prediction is not none %}
+            <p class="result">Classe reconhecida: <strong>{{ prediction }}</strong></p>
+        {% endif %}
+        <a href="{{ url_for('index') }}" class="back">⬅ Voltar</a>
+    </div>
+</body>
+</html>

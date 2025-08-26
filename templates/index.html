@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Reconhecimento de Imagens</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Reconhecimento de Imagens</h1>
+        <p>Escolha o modelo para testar:</p>
+        <div class="buttons">
+            <a href="{{ url_for('mnist') }}" class="btn">MNIST</a>
+            <a href="{{ url_for('cifar') }}" class="btn">CIFAR-10</a>
+        </div>
+    </div>
+</body>
+</html>
